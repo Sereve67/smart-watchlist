@@ -1,3 +1,5 @@
+🚀 **Live Demo:** [Smart Watchlist](https://smart-watchlist-1pv3.onrender.com)
+
 # Smart Watchlist
 
 A market watchlist that tracks what changed since you last checked, not just
