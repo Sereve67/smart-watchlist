@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Watchlist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Login screen -->
+    <section id="login-screen" class="screen">
+      <div class="login-card">
+        <h1>Smart Watchlist</h1>
+        <p class="muted">Not just prices. What changed since you last looked.</p>
+        <form id="login-form">
+          <input id="username-input" type="text" placeholder="Pick a username" autocomplete="off" required />
+          <button type="submit">Continue</button>
+        </form>
+        <p class="muted small">Same username on another device syncs the same list. No password needed for this demo.</p>
+      </div>
+    </section>
+
+    <!-- Main app -->
+    <section id="main-screen" class="screen hidden">
+      <header class="topbar">
+        <div class="brand">Smart Watchlist</div>
+        <div class="conn-status" id="conn-status">connecting…</div>
+        <div class="user-badge" id="user-badge"></div>
+      </header>
+
+      <div id="change-banner" class="change-banner hidden"></div>
+
+      <div class="toolbar">
+        <form id="add-form" autocomplete="off">
+          <input id="add-input" type="text" placeholder="Add symbol e.g. AAPL, BTC-USD" list="symbol-suggestions" />
+          <datalist id="symbol-suggestions"></datalist>
+          <button type="submit">Add</button>
+        </form>
+        <button id="ack-all-btn" class="secondary">Mark all reviewed</button>
+      </div>
+
+      <div id="list" class="list"></div>
+      <p id="empty-state" class="muted hidden">Your watchlist is empty. Add a symbol above to get started.</p>
+    </section>
+  </div>
+
+  <div id="toast-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
